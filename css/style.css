@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5f5f5;
+    width: 1280px;
+    margin: 0 auto;
+    font-family: 'Arial';
+}
+
+header {
+    background-color: #445161;
+    padding: 50px;
+}
+
+header:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.header-wrapper {
+    float: left;
+}
+
+header h1 {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+header ul {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+header li {
+    list-style: none;
+    list-style-image: url(../img/check_icon.png);
+    /* Параметры маркеров */
+    margin-left: 30px;
+}
+
+.photo {
+    display: block;
+    float: right;
+    align-items: center;
+    /*не работает центрирование по вертикали*/
+}
+
+.product {
+    padding: 50px;
+    background-color: white;
+}
+
+.product:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.product-content {
+    float: left;
+    width: 700px;
+}
+
+.product h3 {
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.product p {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+    width: 649px;
+    margin-bottom: 20px;
+}
+
+video {
+    display: block;
+    float: right;
+    background-color: #445161;
+}
+
+.dignity {
+    padding: 50px 50px 15px 50px;
+}
+
+.dignity:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.dignity h3 {
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dignity-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.dignity-list {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 567px;
+    text-align: justify;
+    margin-bottom: 35px;
+}
+
+summary {
+    float: left;
+    margin-right: 10px;
+    display: block;
+    width: 10em;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    /* блок раскрывается при щелчке по кнопке, а не по всей строке */
+    outline-style: none;
+    /* удалить обводку при фокусе */
+    cursor: pointer;
+}
+
+details summary::-webkit-details-marker {
+    /* нестандартный псевдоэлемент Google Chrome */
+    display: none;
+}
+
+.screenshots {
+    padding: 50px;
+    background-color: white;
+}
+
+.screenshots:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.screenshots h3 {
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.screenshots-elements {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.screenshots-elements figure {
+    float: left;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.screenshots img {
+    float: left;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.screenshots figcaption h5 {
+    color: #445161;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 5px;
+}
+
+.screenshots p {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+}
+
+.reviews {
+    padding: 50px 19px 26px 50px;
+}
+
+.reviews:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.reviews h3 {
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.reviews-elements {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reviews img {
+    display: block;
+    float: left;
+    margin-right: 30px;
+}
+
+.reviews-text {
+    margin-bottom: 24px;
+    width: 574px;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: justify;
+    width: 453px;
+    margin-right: 16px;
+
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    background: #e6e6e6;
+}
+
+.reviews-text::after,
+.reviews-text::before {
+    content: '';
+    position: absolute;
+    background: #e6e6e6;
+    left: -11px;
+    bottom: 80px;
+    width: 20px;
+    height: 20px;
+
+    transform: rotate(45deg);
+    /* Поворачиваем на 45º */
+    -webkit-transform: rotate(45deg);
+}
+
+.reviews i {
+    color: #333333;
+}
+
+.autor {
+    color: #989898;
+    margin-top: 3px;
+    ;
+}
+
+.buy {
+    background-color: white;
+    padding: 50px;
+}
+
+.buy:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.buy h3 {
+    text-align: center;
+    margin-bottom: 29px;
+    color: #445161;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.buy-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.buy-element {
+    border: 1px solid #445162;
+    border-radius: 3px;
+    width: 300px;
+    background-color: #445162;
+    color: #ffffff;
+    margin: 0 27px 0 27px;
+}
+
+.buy h5 {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 400;
+    padding: 15px 0;
+}
+
+.buy h1 {
+    font-size: 40px;
+    line-height: 30px;
+    text-align: center;
+    color: #445162;
+    background-color: white;
+    font-weight: 400;
+    padding: 15px 0;
+}
+
+.buy ul {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 19px 0 19px 19px;
+}
+
+.buy-element li {
+    list-style: none;
+}
+
+.buy button {
+    height: 40px;
+    width: 260px;
+    color: #445161;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    border: 1px solid #445162;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px 20px 20px;
+}
+
+.adress {
+    padding: 50px;
+    background-color: #445162;
+}
+
+.adress:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+.adress h3 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.adress-content {
+    display: flex;
+    justify-content: center;
+}
+
+.forms {
+    float: left;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column;  - кнопка send не встает по центру */
+}
+
+.name {
+    width: 488px;
+    height: 40px;
+    margin-bottom: 20px;
+    border: 1px solid #445162;
+    border-radius: 5px;
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-left: 10px;
+}
+
+textarea {
+    width: 488px;
+    height: 168px;
+    margin-bottom: 20px;
+    border: 1px solid #445162;
+    border-radius: 5px;
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 10px 0 0 10px;
+}
+
+.adress button {
+    width: 140px;
+    height: 40px;
+    color: #445162;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border: 1px solid #445162;
+    border-radius: 5px;
+}
+
+.contacts {
+    margin-left: 45px;
+}
+
+.contacts figure {
+    margin-bottom: 29px;
+}
+
+.contacts img {
+    float: left;
+    margin-right: 5px;
+}
+
+.contacts figcaption {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+footer {
+    height: 25px;
+    text-align: center;
+    color: #445162;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
