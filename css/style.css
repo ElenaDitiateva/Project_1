@@ -11,6 +11,7 @@ body {
 }
 
 header {
+    width: 100%;
     background-color: #445161;
     padding: 50px;
 }
@@ -57,6 +58,7 @@ header li {
 }
 
 .product {
+    width: 100%;
     padding: 50px;
     background-color: white;
 }
@@ -97,7 +99,14 @@ video {
 }
 
 .dignity {
+    width: 100%;
     padding: 50px 50px 15px 50px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
 }
 
 .dignity:after {
@@ -107,50 +116,76 @@ video {
     clear: both;
 }
 
-.dignity h3 {
+.dignity-title {
+    display: block;
+    width: 100%;
+    margin: 0 0 30px 0;
     color: #445161;
     font-size: 30px;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-.dignity-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.dignity-list-wrapper {
+    width: 50%;
 }
 
 .dignity-list {
+    width: 90%;
+    margin: 0 0 20px 0;
+    padding: 0 0 0 40px;
     color: #333333;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    width: 567px;
     text-align: justify;
-    margin-bottom: 35px;
 }
 
-summary {
-    float: left;
-    margin-right: 10px;
-    display: block;
-    width: 10em;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    /* блок раскрывается при щелчке по кнопке, а не по всей строке */
+.dignity-list-title {
+    outline: none;
+    position: relative;
     outline-style: none;
     /* удалить обводку при фокусе */
     cursor: pointer;
 }
 
-details summary::-webkit-details-marker {
-    /* нестандартный псевдоэлемент Google Chrome */
-    display: none;
+.dignity-list-title::-webkit-details-marker {
+    display: none
+}
+
+.dignity-list-title:before {
+    content: "+";
+    display: block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    background-color: #445161;
+    position: absolute;
+    top: 2px;
+    left: -40px;
+    line-height: 30px;
+}
+
+details[open] .dignity-list-title:before {
+    content: "-";
+}
+
+/* .dignity-list-wrapper:nth-child(2) > .dignity-list:nth-child(2),
+.dignity-list-wrapper:nth-child(3) > .dignity-list:nth-child(2) {
+    margin-bottom: 40px;
+} - локальные изменения */
+
+.dignity-list-title + p {
+    color: grey;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 .screenshots {
+    width: 100%;
     padding: 50px;
     background-color: white;
 }
@@ -206,7 +241,8 @@ details summary::-webkit-details-marker {
 }
 
 .reviews {
-    padding: 50px 19px 26px 50px;
+    width: 100%;
+    padding: 50px 50px 26px 50px;
 }
 
 .reviews:after {
@@ -228,12 +264,13 @@ details summary::-webkit-details-marker {
 .reviews-elements {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .reviews img {
     display: block;
     float: left;
-    margin-right: 30px;
+    margin-right: 25px;
 }
 
 .reviews-text {
@@ -245,7 +282,7 @@ details summary::-webkit-details-marker {
     line-height: 18px;
     text-align: justify;
     width: 453px;
-    margin-right: 16px;
+    margin-right: 10px;
 
     border-radius: 5px;
     padding: 15px;
@@ -275,10 +312,15 @@ details summary::-webkit-details-marker {
 .autor {
     color: #989898;
     margin-top: 3px;
-    ;
+    text-decoration: none;
+}
+
+.autor:hover {
+    border-bottom: 1px solid #989898;
 }
 
 .buy {
+    width: 100%;
     background-color: white;
     padding: 50px;
 }
@@ -338,6 +380,15 @@ details summary::-webkit-details-marker {
     padding: 19px 0 19px 19px;
 }
 
+.buy ol {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 19px 0 19px 19px;
+}
+
+/*нумерация не отображается*/
+
 .buy-element li {
     list-style: none;
 }
@@ -350,26 +401,32 @@ details summary::-webkit-details-marker {
     font-weight: 700;
     line-height: 18px;
     text-transform: uppercase;
-
+    background-color: white;
     border: 1px solid #445162;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     margin: 0 20px 20px 20px;
+    outline: none;
 }
 
-.adress {
+.buy button:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.address {
+    width: 100%;
     padding: 50px;
     background-color: #445162;
 }
 
-.adress:after {
+.address:after {
     display: block;
     content: "";
     clear: both
 }
 
-.adress h3 {
+.address h3 {
     color: #ffffff;
     font-size: 30px;
     font-weight: 400;
@@ -378,16 +435,9 @@ details summary::-webkit-details-marker {
     margin-bottom: 30px;
 }
 
-.adress-content {
+.address-content {
     display: flex;
     justify-content: center;
-}
-
-.forms {
-    float: left;
-    /* display: flex;
-    justify-content: center;
-    flex-direction: column;  - кнопка send не встает по центру */
 }
 
 .name {
@@ -401,6 +451,7 @@ details summary::-webkit-details-marker {
     font-weight: 400;
     line-height: 24px;
     padding-left: 10px;
+    outline: none;
 }
 
 textarea {
@@ -410,29 +461,39 @@ textarea {
     border: 1px solid #445162;
     border-radius: 5px;
     color: #445162;
+    font-family: 'Arial';
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     padding: 10px 0 0 10px;
+    outline: none;
 }
 
-.adress button {
+.send {
+    display: block;
+    margin: 0 auto;
     width: 140px;
     height: 40px;
     color: #445162;
+    background-color: white;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
     text-transform: uppercase;
     border: 1px solid #445162;
     border-radius: 5px;
+    outline: none;
+}
+
+.send:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .contacts {
     margin-left: 45px;
 }
 
-.contacts figure {
+.contacts div {
     margin-bottom: 29px;
 }
 
@@ -441,7 +502,7 @@ textarea {
     margin-right: 5px;
 }
 
-.contacts figcaption {
+.contacts span {
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
