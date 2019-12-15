@@ -95,7 +95,7 @@ header li {
 video {
     display: block;
     float: right;
-    background-color: #445161;
+    outline: none;
 }
 
 .dignity {
@@ -363,7 +363,8 @@ details[open] .dignity-list-title:before {
     padding: 15px 0;
 }
 
-.buy h1 {
+.buy span {
+    display: block;
     font-size: 40px;
     line-height: 30px;
     text-align: center;
@@ -373,24 +374,11 @@ details[open] .dignity-list-title:before {
     padding: 15px 0;
 }
 
-.buy ul {
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 400;
-    padding: 19px 0 19px 19px;
-}
-
 .buy ol {
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
-    padding: 19px 0 19px 19px;
-}
-
-/*нумерация не отображается*/
-
-.buy-element li {
-    list-style: none;
+    padding: 19px 0 19px 40px;
 }
 
 .buy button {
@@ -410,8 +398,19 @@ details[open] .dignity-list-title:before {
     outline: none;
 }
 
-.buy button:hover {
+.buy button:hover,
+.send:hover {
+    background-color: lightcyan;
+}
+
+.buy button:active,
+.send:active {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.buy button:active,
+.send:active {
+    background-color: lightcyan;
 }
 
 .address {
@@ -448,10 +447,24 @@ details[open] .dignity-list-title:before {
     border-radius: 5px;
     color: #445162;
     font-size: 16px;
+    font-family: 'Arial';
     font-weight: 400;
     line-height: 24px;
     padding-left: 10px;
+    text-transform: capitalize;
     outline: none;
+}
+
+.name:focus,
+textarea:focus {
+    background-color: lightcyan;
+    text-transform: capitalize;
+}
+
+.name:hover,
+textarea:hover {
+    background-color: lightcyan;
+    border-color: white;
 }
 
 textarea {
@@ -467,6 +480,8 @@ textarea {
     line-height: 24px;
     padding: 10px 0 0 10px;
     outline: none;
+    resize: none;
+    text-transform: capitalize;
 }
 
 .send {
@@ -485,10 +500,6 @@ textarea {
     outline: none;
 }
 
-.send:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
 .contacts {
     margin-left: 45px;
 }
@@ -497,16 +508,50 @@ textarea {
     margin-bottom: 29px;
 }
 
-.contacts img {
-    float: left;
-    margin-right: 5px;
-}
-
 .contacts span {
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
-    line-height: 24px;
+    display: block;
+    margin-bottom: 30px;
+}
+
+span .fa:before {
+    font-family: FontAwesome;
+    color: white;
+    font-size: 26px;
+    margin-right: 5px;
+}
+
+span img {
+    float: left;
+    margin-right: 5px;
+}
+
+.contacts a {
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 43px;
+    margin-right: 5px;
+}
+
+.contacts a:hover {
+    background-color: lightcyan;
+}
+
+.contacts a:active {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+a .fa {
+    color: #445162;
+    font-size: 22px;
 }
 
 footer {

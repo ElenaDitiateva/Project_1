@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial';
+    font-size: 12px;
+    background-color: darkcyan;
+    margin-top: 30px;
+}
+
+form {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid darkcyan;
+    box-sizing: border-box;
+}
+
+h5 {
+    text-transform: uppercase;
+    font-weight: 400;
+    display: block;
+    float: left;
+    margin-right: 32px;
+    color: darkcyan;
+}
+
+.radio-wrapper,
+.name-wrapper {
+    padding: 30px 50px 15px 50px;
+    background-color: white;
+}
+
+.checkbox-wrapper,
+.contacts-wrapper {
+    padding: 20px 50px;
+    background-color: #e6e6e6;
+}
+
+.radio-list-wrapper {
+    margin: 0 0 20px 60px;
+}
+
+.label-radio {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 32px;
+    padding-bottom: 4px;
+    margin-right: 15px;
+    font-size: 12px;
+}
+
+/* radio*/
+
+input[type=radio] {
+    display: none;
+}
+
+.label-radio:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+input[type=radio]:checked + .label-radio:before {
+    content: "\2022";
+    color: #2eb8b3;
+    font-size: 34px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.checkbox-list-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: -15px;
+}
+
+.checkbox-elements {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+/* checkbox*/
+
+.checkbox-elements input[type="checkbox"] {
+    opacity: 0;
+}
+
+.label-check {
+    position: relative;
+    display: inline-block;
+    padding-left: 32px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.label-check::before {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border: 1px solid;
+}
+
+.label-check::after {
+    content: "";
+    display: inline-block;
+    height: 6px;
+    width: 9px;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    transform: rotate(-45deg);
+}
+
+.label-check::before,
+.label-check::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*Внешний блок*/
+.label-check::before {
+    top: 0;
+}
+
+/*Галка*/
+.label-check::after {
+    left: 6px;
+    top: 5px;
+}
+
+/*Прячем галку по умолчанию*/
+.checkbox-elements input[type="checkbox"] + .label-check::after {
+    content: none;
+}
+
+/*Показываем галку по состоянию checked*/
+.checkbox-elements input[type="checkbox"]:checked + .label-check::after {
+    content: "";
+}
+
+.name-list-wrapper {
+    margin-left: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+.name {
+    display: block;
+    width: 60px;
+    margin-right: 20px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 5px;
+    margin: 0 0 20px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+}
+
+.contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#phone,
+#mail {
+    background-color: #e6e6e6;
+    width: 377px;
+}
+
+.contacts {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    display: block;
+    float: left;
+    width: 45px;
+    margin-right: 20px;
+    color: darkcyan;
+}
+
+.fa {
+    font-family: FontAwesome;
+    color: grey;
+    margin-left: -15px;
+}
