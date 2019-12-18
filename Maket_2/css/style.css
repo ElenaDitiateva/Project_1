@@ -1,128 +1,264 @@
 body {
-    width: 1920px;
-    margin: 0 auto;
+width: 1920px;
+margin: 0 auto;
+font-family: 'Raleway', sans-serif;
 }
-
 header {
-    width: 100%;
-    background-image: url(../img/photo.jpg);
-    /* Фоновый рисунок */
-    background-size: 100%;
-    height: 1024px;
-    display: flex;
-    flex-direction: column;
+width: 100%;
+background-image: url(../img/photo.jpg);
+/* Фоновый рисунок */
+background-size: 100%;
+height: 1024px;
+display: flex;
+flex-direction: column;
 }
-
 .wrapper {
-    background-color: rgba(17, 17, 17, 0.7);
-    /* Цвет фона */
-    background-size: 100%;
-    opacity: 0.9;
-    /* Полупрозрачный фон */
-    filter: alpha(Opacity=90);
-    /* Прозрачность в IE */
-    color: #fff;
-    /* Цвет текста */
-    padding: 40px 150px 40px 150px;
-    height: 1024px;
+background-color: rgba(17, 17, 17, 0.7);
+/* Цвет фона */
+background-size: 100%;
+opacity: 0.9;
+/* Полупрозрачный фон */
+filter: alpha(Opacity=90);
+/* Прозрачность в IE */
+color: #fff;
+/* Цвет текста */
+padding: 40px 150px 40px 150px;
+height: 1024px;
 }
-
-.header-wrap {}
-
+.header-wrap {
+margin: 0 auto;
+width: 1200px;
+display: flex;
+justify-content: space-between;
+}
 .logo {
-    float: left;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 185px;
+text-decoration: none;
+color: #fff;
 }
-
-header .logo span {
-    color: #ffffff;
-    font-size: 34px;
-    line-height: 34px;
-    font-weight: 400;
-    /* Text style for "Waxom" */
+.logo-txt {
+color: #ffffff;
+font-weight: 300;
+font-size: 34px;
+letter-spacing: -1.36px;
 }
-
+.logo-icon {
+fill: CurrentColor;
+}
+.logo:hover .logo-icon {
+fill: #c7b299;
+}
+.logo:hover .logo-txt {
+color: #c7b299;
+}
+.logo:active .logo-icon {
+fill: grey;
+}
+.logo:active .logo-txt {
+color: grey;
+}
 .menu {
-    margin-top: 20px;
-    float: right;
+padding: 0;
+margin-top: 20px;
+width: 800px;
+display: flex;
+justify-content: space-between;
 }
-
 .menu-list {
-    display: inline-block;
-    margin-right: 30px;
+list-style: none;
+margin-right: 29px;
 }
-
 .menu-list a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 300;
+text-decoration: none;
+color: #ffffff;
+font-family: Montserrat;
+font-size: 14px;
+font-weight: 400;
 }
-
 .menu-list a:hover {
 color: #c7b299;
 }
-
+.menu-list a:active {
+color: grey;
+}
+.menu-list:nth-child(8) {
+flex-grow: 1;
+}
 .menu-icon {
-    margin-right: 0;
-    margin-left: 30px;
+width: 70px;
+display: flex;
+justify-content: space-between;
 }
-
-.menu-icon:hover {
-    box-shadow: 0 0 30px #c7b299;
+.menu-basket,
+.menu-search {
+fill: #ffffff;
 }
-
+.menu-basket:hover,
+.menu-search:hover {
+fill: #c7b299;
+}
 .slider-text {
-    display: block;
-    text-align: center;
-    margin-top: 300px;
-    color: #ffffff;
+display: block;
+width: 590px;
+text-align: center;
+margin-top: 285px;
+color: #ffffff;
 }
-
 header h3 {
-    margin: 0 0 15px 0;
-    font-size: 36px;
-    font-weight: 500;
+margin: 0 0 14px 0;
+font-size: 36px;
+font-weight: 500;
 }
-
 header h1 {
-    margin: 0 0 15px 0;
-    font-size: 52px;
-    font-weight: 400;
+margin: 0 0 19px 0;
+font-size: 52px;
+font-weight: 700;
 }
-
-header h6 {
-    margin: 0 0 15px 0;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
+header p {
+margin: 0 0 52px 0;
+font-family: Montserrat;
+font-size: 16px;
+font-weight: 300;
+line-height: 24px;
 }
-
 .slider-button {
-    display: block;
-    margin: 0 auto;
-    width: 170px;
-    height: 53px;
-    box-shadow: inset 0 -3px 0 #736357;
-    border-radius: 3px;
-    background-color: #998675;
-    border: 1px solid #998675;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 23px;
-    text-transform: uppercase;
-    outline: none;
+display: block;
+margin: 0 auto;
+width: 170px;
+height: 53px;
+box-shadow: inset 0 -3px 0 #736357;
+border-radius: 3px;
+background-color: #998675;
+border: none;
+box-sizing: border-box;
+color: #ffffff;
+font-size: 14px;
+font-weight: 400;
+line-height: 23px;
+text-transform: uppercase;
+outline: none;
 }
-
 .slider-button:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+background-color: #b0a194;
+color: #26211d;
+cursor: pointer;
 }
-
-.arrows {
-    display: flex;
-    justify-content: space-between;
+.slider-button:active {
+background-color: grey;
+border: none;
 }
-
+.slider {
+display: flex;
+justify-content: space-between;
+}
+.arrow-left {
+margin-top: 379px;
+background-image: url('../img/left.svg');
+width: 40px;
+height: 73px;
+background-repeat: no-repeat;
+background-position: center, top;
+background-size: 100%;
+}
+.arrow-right {
+margin-top: 379px;
+background-image: url('../img/right.svg');
+width: 40px;
+height: 73px;
+background-repeat: no-repeat;
+background-position: center, top;
+background-size: 100%;
+}
 header .pagination {}
-
 header .circle {}
+.section-2 {
+width: 100%;
+display: flex;
+justify-content: center;
+padding: 80px 0;
+}
+.sect-2 {
+text-decoration: none;
+width: 310px;
+}
+.svq-items svg{
+height: 49px;
+fill: #555555;
+}
+.svq-items {
+margin: 0 30px 0 0;
+text-align: center;
+color: #8c8c8c;
+}
+.svq-items h5{
+color: #555555;
+font-size: 22px;
+font-weight: 400;
+}
+.svq-items span{
+font-family: Montserrat;
+font-size: 14px;
+font-weight: 300;
+line-height: 24px;
+}
+.border-bot {
+display: block;
+margin: 20px 0 0 0;
+border-bottom: 3px solid lightgrey;
+}
+.svq-items:hover .border-bot {
+border-bottom: 3px solid #c7b299;
+}
+.svq-items:hover h5,
+.svq-items:hover span {
+color: #c7b299;
+}
+.svq-items:hover svg {
+fill: #c7b299;
+}
+.svq-items:active h5,
+.svq-items:active span {
+color: grey;
+}
+.svq-items:active svg {
+fill: grey;
+}
+.realization {
+width: 100%;
+padding: 80px 0 0 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: #fbfaf8;
+}
+.realization h3{
+color: #555555;
+font-size: 30px;
+font-weight: 400;
+margin: 0 0 24px 0;
+}
+.realization-txt {
+width: 770px;
+color: #8c8c8c;
+font-family: Montserrat;
+font-size: 16px;
+font-weight: 300;
+line-height: 28px;
+text-align: center;
+margin: 0 0 40px 0;
+}
+.browser-img {
+width: 1230px;
+height: 482px;
+background-color: #fff;
+background-image: url('../img/browser-center.jpg'),
+url('../img/browser-left.jpg'),
+url('../img/browser-right.jpg');
+background-size: 70%, 50%, 50%;
+background-repeat: no-repeat;
+background-position: center, bottom left, bottom right;
+}

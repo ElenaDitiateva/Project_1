@@ -523,9 +523,17 @@ span .fa:before {
     margin-right: 5px;
 }
 
-span img {
-    float: left;
+#icq {
+    position: relative;
+}
+
+#icq::before {
+    width: 26px;
+    height: 26px;
+    content: " ";
+    display: inline-block;
     margin-right: 5px;
+    background-image: url("../img/icq_icon.png");
 }
 
 .contacts a {
