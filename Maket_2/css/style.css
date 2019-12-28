@@ -45,6 +45,11 @@
     src: url(../fonts/raleway/raleway-bold.ttf);
     font-weight: 700;
 }
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
 
 body {
     width: 1920px;
@@ -912,7 +917,7 @@ video {
     margin: 0 auto 40px auto;
 }
 
-.txt-6 {
+.elements-6 {
     text-align: left;
     display: flex;
     justify-content: center;
@@ -922,7 +927,37 @@ video {
 .txt-6-items {
     margin: 0 30px 0 0;
 }
+.data {
+    position: absolute;
+    margin: 20px 0 0 20px;
+}
+.date {
+    display: block;
+    text-align: center;
+    width: 50px;
+height: 35px;
+background-color: #363636;
+border-radius: 3.0px 3.0px 0.0px 0.0px;
+    font-family: Montserrat;
+font-size: 24px;
+line-height: 35px;
+font-weight: 300;
+color: #ffffff;
+}
 
+.month {
+    display: block;
+    text-align: center;
+    width: 50px;
+height: 25px;
+background-color: #252525;
+border-radius: 0.0px 0.0px 3.0px 3.0px;
+    font-family: Roboto;
+font-size: 12px;
+line-height: 25px;
+font-weight: 400;
+color: #ffffff;
+}
 .recent-img {
     background-color: bisque;
 }
@@ -978,6 +1013,12 @@ video {
     border-left: 8px solid grey;
 }
 
+.txt-6-items:hover .date {
+    background-color: #c7b299;
+}
+.txt-6-items:hover .month {
+    background-color: #a48d72;
+}
 .txt-6-items:hover h5 {
     color: #c7b299;
 }
