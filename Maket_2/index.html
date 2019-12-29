@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>Waxom</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Raleway:300,400,600,700,800|Roboto&display=swap" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -19,6 +18,12 @@
                     <span class="logo-txt">Waxom</span>
                 </a>
                 <nav class="main-nav">
+                    <label id="label" for="menu">
+                        <div class="upper"></div>
+                        <div class="middle"></div>
+                        <div class="bottom"></div>
+                    </label>
+                    <input id="menu" type="checkbox">
                     <ul class="menu">
                         <li class="menu-list"><a href="index.html">Home</a></li>
                         <li class="menu-list"><a href="#">About Us</a></li>
@@ -34,7 +39,7 @@
                                     <path d="M17.994 5.997v14.998a3 3 0 0 1-2.999 3H3.002a3 3 0 0 1-2.999-3V5.997A2.999 2.999 0 0 1 3.002 3H4.5c0-1.657 2.013-3 4.498-3 2.484 0 4.497 1.343 4.497 3h1.5a2.999 2.999 0 0 1 2.998 2.998zM6 3h5.997c0-1.037-1.342-1.5-2.998-1.5-1.656 0-2.999.463-2.999 1.5zm10.495 16.496H1.502v1.5c0 .828.672 1.5 1.5 1.5h11.993a1.5 1.5 0 0 0 1.5-1.5zm0-13.498a1.5 1.5 0 0 0-1.5-1.5h-1.499v4.5h-1.499v-4.5H6v4.5H4.501v-4.5h-1.5a1.5 1.5 0 0 0-1.499 1.5v11.998h14.993z" /></svg>
                             </a>
                             <form action="#" method="post">
-                                <input class="menu-search" type="search">
+                                <input class="menu-search" type="text">
                             </form>
                         </li>
                     </ul>
@@ -111,11 +116,11 @@
         <h2>Our Latest Projects.</h2>
         <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
         <ul class="navigation">
-            <li class="navigation-list"><a class="nav-all" href="#">All</a></li>
-            <li class="navigation-list"><a class="nav-items" href="#">Web Design</a></li>
-            <li class="navigation-list"><a class="nav-items" href="#">Mobile App</a></li>
-            <li class="navigation-list"><a class="nav-items" href="#">Illustration</a></li>
-            <li class="navigation-list"><a class="nav-items" href="#">Photography</a></li>
+            <li class="navigation-list"><button class="nav-all">All</button></li>
+            <li class="navigation-list"><button class="nav-items">Web Design</button></li>
+            <li class="navigation-list"><button class="nav-items">Mobile App</button></li>
+            <li class="navigation-list"><button class="nav-items">Illustration</button></li>
+            <li class="navigation-list"><button class="nav-items">Photography</button></li>
         </ul>
         <div class="wrap-projects">
             <figure class="projects-items">
@@ -293,10 +298,10 @@
         <p>Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</p>
         <div class="elements-6">
             <figure class="txt-6-items">
-               <div class="data">
-                   <span class="date">30</span>
-                   <span class="month">Sep.</span>
-               </div>
+                <div class="data">
+                    <span class="date">30</span>
+                    <span class="month">Sep.</span>
+                </div>
                 <img class="recent-img" src="img/photo-30-1.jpg" alt="photo" width="370" height="220">
                 <figcaption>
                     <h5 class="caption-6">Lorem ipsum dolor sit amet</h5>
@@ -305,10 +310,10 @@
                 </figcaption>
             </figure>
             <figure class="txt-6-items">
-               <div class="data">
-                   <span class="date">30</span>
-                   <span class="month">Sep.</span>
-               </div>
+                <div class="data">
+                    <span class="date">30</span>
+                    <span class="month">Sep.</span>
+                </div>
                 <img class="recent-img" src="img/photo-30-2.jpg" alt="laptop" width="370" height="220">
                 <figcaption>
                     <h5 class="caption-6">Lorem ipsum dolor sit amet</h5>
@@ -317,10 +322,10 @@
                 </figcaption>
             </figure>
             <figure class="txt-6-items">
-               <div class="data">
-                   <span class="date">30</span>
-                   <span class="month">Sep.</span>
-               </div>
+                <div class="data">
+                    <span class="date">30</span>
+                    <span class="month">Sep.</span>
+                </div>
                 <img class="recent-img" src="img/photo-30-3.jpg" alt="ship" width="370" height="220">
                 <figcaption>
                     <h5 class="caption-6">Lorem ipsum dolor sit amet</h5>
