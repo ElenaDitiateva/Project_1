@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS</title>
+</head>
+<body>
+
+    <script> 
+
+        // Задание 1
+
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c);           // 2 
+        d = b++; alert(d);           // 1 
+        c = (2+ ++a); alert(c);      // 5
+        d = (2+ b++); alert(d);      // 4
+        alert(a);                    // 3
+        alert(b);                    // 3
+        // Префиксная форма возвращает новое значение, а постфиксная - возвращает старое.
+        
+
+        // Задание 2
+
+        var a = 2;
+        var x = 1 + (a *= 2);
+        alert(a);               // 4                
+        alert(x);               // 5 
+
+
+        // Задание 3 
+
+        var first = parseInt(prompt('Введите первое число:'));
+        var second = parseInt(prompt('Введите второе число:'));
+
+        function check(a,b) {
+            if (a>=0 && b>=0) {
+            return 'разность равна ' + (a-b);
+        } else if (a<0 && b<0) {
+            return 'умножение равно ' + (a*b);
+        } else {
+            return 'сумма равна ' + (a+b);
+        }
+        }
+        alert(check(first,second));
+
+       
+        // Задание 4
+
+        var a = parseInt(prompt('Введите число от 1 до 15:'));
+
+		switch (a) {
+		case 1:
+			alert ( 'Ваше число 1');
+			break;
+		case 2:
+			alert ( 'Ваше число 2');
+			break;
+		case 3:
+			alert ( 'Ваше число 3');
+			break;
+		case 4:
+			alert ( 'Ваше число 4');
+			break;
+		case 5:
+			alert ( 'Ваше число 5');
+			break;
+		case 6:
+			alert ( 'Ваше число 6');
+			break;
+		case 7:
+			alert ( 'Ваше число 7');
+			break;
+		case 8:
+			alert ( 'Ваше число 8');
+			break;
+		case 9:
+			alert ( 'Ваше число 9');
+			break;
+		case 10:
+			alert ( 'Ваше число 10');
+			break;
+		case 11:
+			alert ( 'Ваше число 11');
+			break;
+		case 12:
+			alert ( 'Ваше число 12');
+			break;
+		case 13:
+			alert ( 'Ваше число 13');
+			break;
+		case 14:
+			alert ( 'Ваше число 14');
+			break;
+		case 15:
+			alert ( 'Ваше число 15');
+			break;	
+		}	
+
+
+        // Задание 5
+
+		function summa(a, b) {
+    		return a+b;
+        }
+        alert(summa(9,3));
+
+		function raznost(a, b) {
+    		return a-b;
+		}
+        alert(raznost(9,3));
+
+		function delenie(a, b) {
+    		return a/b;
+        }
+        alert(delenie(9,3));
+
+		function umnozhenie(a, b) {
+    		return a*b;
+        }
+        alert(umnozhenie(9,3));
+
+          
+        // Задание 6
+
+        function mathOperation(arg1, arg2, operation){
+    			switch(operation){
+       				 case 'сложение':
+           				 return arg1 + arg2;
+           				 break;
+       				 case 'вычитание':
+           				 return arg1 - arg2;
+            			 break;
+        			 case 'деление':
+                      			 return arg1 / arg2;
+            			 break;
+       				 case 'умножение':
+           				 return arg1 * arg2;
+            			 break;
+   				}
+        }
+        alert(mathOperation(9, 3, 'деление'));
+
+
+        // Задание 7
+
+        null>0 // false
+        null<0 // false
+        null=0 // SyntaxError 
+
+        // Задание 8
+
+        function power(val, pow) {
+            var current = Math.pow(val, pow);
+            var result_string = current + " ";
+            return result_string;
+        }
+        alert(power(2, 3));
+
+    </script> 
+</body>
+</html>
