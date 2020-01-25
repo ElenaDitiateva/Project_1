@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100
+
+        let i=1;
+        let j;
+
+        nextPrime:
+        while (i<100) {
+            i++; 
+            for (j=2; j<i; j++) {
+                if (i % j == 0) continue nextPrime;
+            }
+            console.log(i);           
+        }
+
+        
+        //4.*Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. 
+        //Выглядеть это должно так: for(…){// здесь пусто}
+
+        for (let i=0; i<10; i++) 
+        console.log(i);
+
+
+        /* 4) Нарисовать пирамиду с помощью console.log, как показано на рисунке, 
+              только у вашей пирамиды должно быть 20 рядов, а не 5:
+        x
+        xx
+        xxx
+        xxxx
+        xxxxx       */
+
+        function repeatedString(n, str) {
+            let str1 = str;
+
+            for (let i=0; i<n; i++) {
+                str1 += str;
+            }
+
+            return str1;
+        }
+
+        let i=0;
+        let x='x';
+
+        while (i<20) {
+            console.log(repeatedString(i++,x));
+        } 
+        
+
+    
+    </script>
+</body>
+</html>
