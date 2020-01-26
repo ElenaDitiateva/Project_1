@@ -10,12 +10,13 @@
     <script>
 
         //1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100
+        //  Решето Эратосфена
 
-        let i=1;
+        let i = 1;
         let j;
 
         nextPrime:
-        while (i<100) {
+        while (i < 100) {
             i++; 
             for (j=2; j<i; j++) {
                 if (i % j == 0) continue nextPrime;
@@ -49,11 +50,11 @@
             return str1;
         }
 
-        let i=0;
-        let x='x';
+        let i = 0;
+        let x = 'x';
 
-        while (i<20) {
-            console.log(repeatedString(i++,x));
+        while (i < 20) {
+            console.log(repeatedString(i++, x));
         } 
         
 
