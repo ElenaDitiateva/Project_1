@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-
         //1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100
         //  Решето Эратосфена
 
@@ -16,20 +17,20 @@
         let j;
 
         nextPrime:
-        while (i < 100) {
-            i++; 
-            for (j=2; j<i; j++) {
-                if (i % j == 0) continue nextPrime;
+            while (i < 100) {
+                i++;
+                for (j = 2; j < i; j++) {
+                    if (i % j == 0) continue nextPrime;
+                }
+                console.log(i);
             }
-            console.log(i);           
-        }
 
-        
+
         //4.*Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. 
         //Выглядеть это должно так: for(…){// здесь пусто}
 
-        for (let i=0; i<10; i++) 
-        console.log(i);
+        for (let i = 0; i < 10; i++)
+            console.log(i);
 
 
         /* 4) Нарисовать пирамиду с помощью console.log, как показано на рисунке, 
@@ -43,7 +44,7 @@
         function repeatedString(n, str) {
             let str1 = str;
 
-            for (let i=0; i<n; i++) {
+            for (let i = 0; i < n; i++) {
                 str1 += str;
             }
 
@@ -55,10 +56,8 @@
 
         while (i < 20) {
             console.log(repeatedString(i++, x));
-        } 
-        
-
-    
+        }
     </script>
 </body>
+
 </html>
