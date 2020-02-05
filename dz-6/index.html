@@ -6,18 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <a class="logo" href="index.html">E-SHOP</a>
-        <div class="search"></div>
-        <button class="cart">Корзина</button>
+        <form action="#">
+            <input type="text" class="search">
+            <i class="fa fa-search fa-fw"></i>
+            <button class="cart">Корзина</button>
+        </form>
     </header>
     <main>
-        <!-- <div id="full-cart">
-            
-        </div> -->
+        <div id="cart-block" class="invisible"></div>
     </main>
     <script src="js/main.js"></script>
 </body>

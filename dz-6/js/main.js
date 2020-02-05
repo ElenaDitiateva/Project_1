@@ -1,3 +1,5 @@
+let cartContainer;
+
 let DB = [
     {id: 1, title: "Notebook", price: 1000, image: "https://24hstore.vn/images/products/2019/10/16/resized/macbook-pro-2019_1571196237.jpg"},
     {id: 2, title: "Display", price: 200, image: "http://artinnet.net/uploads/products_pictures/medium_mac.jpg"},
@@ -9,14 +11,15 @@ let DB = [
     {id: 8, title: "Gamepad", price: 24, image: "https://i.pinimg.com/200x150/cf/e3/82/cfe38234b61d4dc806a358ae6b2600bb.jpg"},
 ];
 
+
 let Cart = {
     add: function(item) {
         let index = this.findById(item.id);
 
         if (index != -1) {
-            this._items[index].count++;
+            this._items[index].qty++;
         } else {
-            item.count = 1;
+            item.qty = 1;
             this._items.push(item);
         }
 
@@ -26,20 +29,39 @@ let Cart = {
         let index = this.findById(id);
 
         if (index != -1) {
-            array.splice(index, 1);
+            this._items.splice(index, 1);
             this.redraw();
         }
     },
+    drawItemCart: function(item) {
+        return `<div class="cart-block-wrp">
+            <img src="http://placehold.it/100x80" alt="">
+            <div class="cart-wrp">
+                <span class="cart-topic">${item.title}</span>
+                <span class="cart-quantity">Quantity: ${item.qty}</span>
+                <span class="cart-price">$${item.price} each</span>
+            </div>
+            <div class="cart-wrp">
+                <span class="cart-topic">${item.price*item.qty}</span>
+                <button class="cart-cancel" data-id="${item.id}">x</button>
+            </div></div>`;
+    },
     redraw: function() {
-        console.dir(this._items);
+        let str = '';
+
+        this._items.forEach(item => {
+            str += this.drawItemCart(item);
+        });
+
+        cartContainer.innerHTML = str;
+        cartContainer.className = this.isEmpty() ? 'invisible' : '';
     },
     findById: function(id) {
         for (let i = 0; i < this.size(); i++) {
             if (this._items[i].id == id) {
                 return i;
-            }
+            }  
         }
-
         return -1;
     },
     isEmpty: function() {
@@ -97,5 +119,14 @@ let Cart = {
         product.appendChild(button);
 
         wrapper.appendChild(product);
+
+        // Add event listener to cart
+        cartContainer = document.getElementById("cart-block");
+        cartContainer.onclick = event => {
+            if (event.target.tagName == "BUTTON") {
+                let id = event.target.getAttribute("data-id");
+                Cart.remove(id);
+            }
+        };
     }
 })();
