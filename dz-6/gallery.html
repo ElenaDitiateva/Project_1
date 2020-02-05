@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #GALLERY {display: flex; justify-content: space-evenly; align-items: center; margin-bottom: 30px;}
+        .arrow {position: relative; } 
+        .left:after { content: ""; width: 30px; height: 30px; margin: 30px 10px;
+        border-bottom: 2px solid #d3c1ad;
+        border-left: 2px solid #d3c1ad;
+        transform: rotate(45deg); position: absolute; }
+        .right:after { content: ""; width: 30px; height: 30px; margin: 30px 10px;
+        border-top: 2px solid #d3c1ad;
+        border-right: 2px solid #d3c1ad;
+        transform: rotate(45deg); position: absolute; }
+        #roulette {display: flex; justify-content: space-evenly;}
+       </style>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <div id="GALLERY">
+            <a href="#" class="arrow left"></a>
+            <div>
+                <img id="MAIN-PIC" width="400" height="300">
+            </div>
+            <a href="#" class="arrow right"></a>
+        </div>
+        
+        <div id="roulette"></div>
+    </div>
+
+    <script>
+        let IMGS = [
+            'https://cs8.pikabu.ru/post_img/big/2017/12/25/5/1514188160141511997.jpg', 
+            'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/HMUB2?wid=1144&hei=1144&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1563827752399',
+            'https://zeon18.ru/files/item/Xiaomi-Mi-Notebook-Air-4G-Officially-Announced-Weboo-co-2%20(1)_1.jpg',
+            'https://files.sandberg.it/products/images/lg/640-05_lg.jpg',
+            'https://images-na.ssl-images-amazon.com/images/I/81PLqxtrJ3L._SX466_.jpg'
+            ]
+
+        let currenIndex = 0;
+        
+        function moveForward() {
+            if (currenIndex == IMGS.length - 1) {
+                currenIndex = 0;
+            } else {
+                currenIndex++;
+            }
+
+            MAIN_PIC.src = IMGS[currenIndex];
+        }
+
+        function moveBackward() {
+            if (currenIndex == 0) {
+                currenIndex = IMGS.length - 1;
+            } else {
+                currenIndex--;
+            }
+            MAIN_PIC.src = IMGS[currenIndex];
+        }
+
+        let arrow_left = document.querySelector('.left');
+
+        arrow_left.addEventListener('click', evt => {
+            if (evt.target.tagName === 'A') {
+                moveBackward();
+            }
+        })
+
+        let arrow_right = document.querySelector('.right');
+
+        arrow_right.addEventListener('click', evt => {
+            if (evt.target.tagName === 'A') {
+                moveForward();
+            }
+        })
+        
+
+        let MAIN_PIC = document.querySelector('#MAIN-PIC')
+        let roulette = document.querySelector('#roulette')
+
+        window.onload = () => {
+            MAIN_PIC.src = IMGS [0]
+
+            IMGS.forEach (img => {
+                roulette.insertAdjacentHTML('beforeend', createItem(img).createTemplate() )
+            })
+        }
+
+        function createItem (url) {
+            return {
+                width: 150,
+                height: 120,
+                createTemplate ()  {
+                    return `
+                        <img src="${url}" width="${this.width}" height="${this.height}"></img>
+                    `
+                }
+            }
+        }
+
+        roulette.addEventListener ('click', evt => {
+            if (evt.target.tagName === 'IMG') {
+                MAIN_PIC.src = evt.target.src
+            }
+        })
+    </script>
+</body>
+</html>
