@@ -1,5 +1,3 @@
-let cartContainer;
-
 let DB = [
     {id: 1, title: "Notebook", price: 1000, image: "https://24hstore.vn/images/products/2019/10/16/resized/macbook-pro-2019_1571196237.jpg"},
     {id: 2, title: "Display", price: 200, image: "http://artinnet.net/uploads/products_pictures/medium_mac.jpg"},
@@ -11,8 +9,24 @@ let DB = [
     {id: 8, title: "Gamepad", price: 24, image: "https://i.pinimg.com/200x150/cf/e3/82/cfe38234b61d4dc806a358ae6b2600bb.jpg"},
 ];
 
-
 let Cart = {
+    visible: false,
+    cartContainer: null,
+
+    init: function() {
+        let _self = this;
+        document.querySelector('.cart-btn').addEventListener('click', () => {
+            _self.setVisible(!_self.visible);
+        });
+
+        this.cartContainer = document.getElementById("cart-block");
+        this.cartContainer.onclick = event => {
+            if (event.target.tagName == "BUTTON") {
+                let id = event.target.getAttribute("data-id");
+                _self.remove(id);
+            }
+        };
+    },
     add: function(item) {
         let index = this.findById(item.id);
 
@@ -28,33 +42,52 @@ let Cart = {
     remove: function(id) {
         let index = this.findById(id);
 
-        if (index != -1) {
-            this._items.splice(index, 1);
+        if  (index != -1) {
+            if (--this._items[index].qty == 0) {
+                this._items.splice(index, 1);
+            }
             this.redraw();
         }
     },
-    drawItemCart: function(item) {
-        return `<div class="cart-block-wrp">
-            <img src="http://placehold.it/100x80" alt="">
+    drawItemCart: function(item) { 
+        return `
+        <div class="cart-block-wrp">
+            <img src="${item.image}" width="100" height="80" alt="${item.title}">
             <div class="cart-wrp">
                 <span class="cart-topic">${item.title}</span>
                 <span class="cart-quantity">Quantity: ${item.qty}</span>
                 <span class="cart-price">$${item.price} each</span>
             </div>
             <div class="cart-wrp">
-                <span class="cart-topic">${item.price*item.qty}</span>
-                <button class="cart-cancel" data-id="${item.id}">x</button>
-            </div></div>`;
+                <span class="cart-topic">$${item.price*item.qty}</span>
+                <button class="cart-cancel" data-id="${item.id}">&times;</button>
+            </div>
+        </div>`;
     },
     redraw: function() {
         let str = '';
+        let sum = 0;
+        let qty = 0;
+        let itemsEl = document.getElementsByClassName("cart-items")[0];
+        let totalSumEl = document.getElementById("tot-sum");
+        let totalQtyEl = document.getElementById("tot-qty");
 
         this._items.forEach(item => {
             str += this.drawItemCart(item);
+            sum += item.qty * item.price;
+            qty += item.qty;
         });
 
-        cartContainer.innerHTML = str;
-        cartContainer.className = this.isEmpty() ? 'invisible' : '';
+        totalSumEl.textContent = sum;
+        totalQtyEl.textContent = qty;
+
+        itemsEl.innerHTML = str;
+    },
+    setVisible: function(state) {
+        if (this.visible != state) {
+            this.visible = state;
+            this.cartContainer.className = !state ? 'invisible' : '';
+        }
     },
     findById: function(id) {
         for (let i = 0; i < this.size(); i++) {
@@ -119,14 +152,7 @@ let Cart = {
         product.appendChild(button);
 
         wrapper.appendChild(product);
-
-        // Add event listener to cart
-        cartContainer = document.getElementById("cart-block");
-        cartContainer.onclick = event => {
-            if (event.target.tagName == "BUTTON") {
-                let id = event.target.getAttribute("data-id");
-                Cart.remove(id);
-            }
-        };
     }
+
+    Cart.init();
 })();
