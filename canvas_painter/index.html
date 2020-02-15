@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Painter</title>
+</head>
+
+<body>
+  <main id="app">
+    <div class="tools">
+      <div class="coordinates">
+        <p id="x"> <b>x: </b> <span id="x-coord"></span> </p>
+        <p id="y"> <b>y: </b> <span id="y-coord"></span> </p>
+      </div>
+      <span class="tools-txt">Tools</span>
+      <button name="tool-button" data-name="pencil" class="pencil" title="pencil" autofocus>Pencil</button>
+      <button name="tool-button" data-name="brush" class="brush" title="brush">Brush</button>
+      <button name="tool-button" data-name="line" class="line" title="line">Line</button>
+      <button name="tool-button" data-name="rectangle" class="rectangle" title="rectangle">Rectangle</button>
+      <button name="tool-button" data-name="fill" class="fill" title="fill">fill</button>
+      <input class="jscolor {onFineChange:'update(this)'}" value="000000" name="input-obj" data-name="color">
+      <label for="point-width" class="tools-txt"> Width </label>
+      <input type="range" id="point-width" name="input-obj" value="2" min="1" max="20" step="1">
+      <div> <span id="hex-str"></span></div>
+      <button><a href="#" id="save-button" name="save-button" data-name="save" target="blanck" download="image.png">Save</a></button>
+      <button name="tool-button" data-name="clear" class="clear">Clear</button>
+    </div>
+    <div class="canv">
+      <canvas id="canv" width="700" height="400"></canvas>
+    </div>
+  </main>
+
+  <script src="colorpicker/jscolor.js"></script>
+  <script defer src="js/canvas.js"></script>
+</body>
+
+</html>
