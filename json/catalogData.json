@@ -1,0 +1,74 @@
+[
+  {
+    "id_product": 1,
+    "product_name": "Watch Series 5",
+    "price": 590,
+    "image": "img/Watch_Series_5.webp"
+  },
+  {
+    "id_product": 2,
+    "product_name": "AirPods",
+    "price": 190,
+    "image": "img/AirPods.webp"
+  },
+  {
+    "id_product": 3,
+    "product_name": "AirPods Pro",
+    "price": 290,
+    "image": "img/AirPods_Pro.webp"
+  },
+  {
+    "id_product": 4,
+    "product_name": "iMac",
+    "price": 1790,
+    "image": "img/iMac.jpg"
+  },
+  {
+    "id_product": 5,
+    "product_name": "Apple Pro Display",
+    "price": 5990,
+    "image": "img/Apple_Pro_Display.webp"
+  },
+  {
+    "id_product": 6,
+    "product_name": "Mac Pro",
+    "price": 47490,
+    "image": "img/Mac_Pro.webp"
+  },
+  {
+    "id_product": 7,
+    "product_name": "Apple TV",
+    "price": 290,
+    "image": "img/Apple_TV.jpg"
+  },
+  {
+    "id_product": 8,
+    "product_name": "MacBook Pro",
+    "price": 3490,
+    "image": "img/MacBook_Pro.webp"
+  },
+  {
+    "id_product": 9,
+    "product_name": "MacBook Air",
+    "price": 1490,
+    "image": "img/MacBook_Air.webp"
+  },
+  {
+    "id_product": 10,
+    "product_name": "iPhone 11",
+    "price": 990,
+    "image": "img/iPhone_11.webp"
+  },
+  {
+    "id_product": 11,
+    "product_name": "iPhone 11 Pro",
+    "price": 1990,
+    "image": "img/iPhone_11_Pro.webp"
+  },
+  {
+    "id_product": 12,
+    "product_name": "iPad Air",
+    "price": 990,
+    "image": "img/iPad_Air.webp"
+  }
+]
