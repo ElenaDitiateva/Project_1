@@ -6,6 +6,12 @@
     "image": "img/Watch_Series_5.webp"
   },
   {
+    "id_product": 13,
+    "product_name": "Watch Nike Series 5",
+    "price": 539,
+    "image": "img/Watch_Nike_Series_5.jpg"
+  },
+  {
     "id_product": 2,
     "product_name": "AirPods",
     "price": 190,
@@ -22,6 +28,12 @@
     "product_name": "iMac",
     "price": 1790,
     "image": "img/iMac.jpg"
+  },
+  {
+    "id_product": 14,
+    "product_name": "iMac Pro",
+    "price": 5490,
+    "image": "img/iMac_pro.jpg"
   },
   {
     "id_product": 5,
