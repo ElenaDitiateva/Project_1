@@ -37,15 +37,15 @@
   },
   {
     "id_product": 5,
-    "product_name": "Pro Display",
-    "price": 5990,
-    "image": "img/Apple_Pro_Display.webp"
-  },
-  {
-    "id_product": 6,
     "product_name": "Mac Pro",
     "price": 47490,
     "image": "img/Mac_Pro.webp"
+  },
+  {
+    "id_product": 6,
+    "product_name": "Pro Display",
+    "price": 5990,
+    "image": "img/Apple_Pro_Display.webp"
   },
   {
     "id_product": 7,
