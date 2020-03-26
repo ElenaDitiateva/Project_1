@@ -4,14 +4,14 @@
     "category": 1,
     "product_name": "Erika RAY BAN RB 2180",
     "price": 149,
-    "image": "/img/RB2180.jpg"
+    "image": "img/RB2180.jpg"
   },
   {
     "id_product": 9,
     "category": 2,
     "product_name": "Erika OPAL Optics RB 7046",
     "price": 119,
-    "image": "/img/RB7046.jpg"
+    "image": "img/RB7046.jpg"
   },
   {
     "id_product": 4,
