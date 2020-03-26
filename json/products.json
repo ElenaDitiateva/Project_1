@@ -1,0 +1,72 @@
+[
+  {
+    "id_product": 2,
+    "category": 1,
+    "product_name": "Erika RAY BAN RB 2180",
+    "price": 149,
+    "image": "/img/RB2180.jpg"
+  },
+  {
+    "id_product": 9,
+    "category": 2,
+    "product_name": "Erika OPAL Optics RB 7046",
+    "price": 119,
+    "image": "/img/RB7046.jpg"
+  },
+  {
+    "id_product": 4,
+    "category": 1,
+    "product_name": "Aviator RAY BAN RB 3025",
+    "price": 169,
+    "image": "/img/RB3025.jpg"
+  },
+  {
+    "id_product": 10,
+    "category": 2,
+    "product_name": "Aviator Optics RB 6489",
+    "price": 109,
+    "image": "/img/RB6489.jpg"
+  },
+  {
+    "id_product": 6,
+    "category": 1,
+    "product_name": "Wayfarer RAY BAN RB 2132",
+    "price": 199,
+    "image": "/img/RB2132.jpg"
+  },
+  {
+    "id_product": 8,
+    "category": 2,
+    "product_name": "Wayfarer EASE Optics RB 4340V",
+    "price": 119,
+    "image": "/img/RB4340V.jpg"
+  },
+  {
+    "id_product": 1,
+    "category": 1,
+    "product_name": "Clubmaster RAY BAN RB 3545",
+    "price": 179,
+    "image": "/img/RB3545.jpg"
+  },
+  {
+    "id_product": 7,
+    "category": 2,
+    "product_name": "Clubmaster Optics RB 5154",
+    "price": 109,
+    "image": "/img/RB5154.jpeg"
+  },
+  {
+    "id_product": 3,
+    "category": 1,
+    "product_name": "Clubmaster RAY BAN RB 3596",
+    "price": 179,
+    "image": "/img/RB3596.jpg"
+  },
+  {
+    "id_product": 5,
+    "category": 2,
+    "product_name": "Clubmaster RAY BAN RB 6375",
+    "price": 129,
+    "image": "/img/RB6375.jpg"
+  }
+]
